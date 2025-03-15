@@ -27,7 +27,7 @@ export default {
       'getPosition',
       'getGuidesStatic',
       'renderGuide',
-      'getGuidesTarget',
+      'getGuidesTarget'
     );
     const { target, event, mode, dragger = {} } = opts;
     const el = target.getEl();
@@ -119,7 +119,7 @@ export default {
         debounce(() => {
           this.updateGuides();
           opts.debug && this.guides?.forEach((item: any) => this.renderGuide(item));
-        }, 200),
+        }, 200)
       );
     }
 
@@ -294,7 +294,7 @@ export default {
       styleUp = { transform, __p };
       target.addStyle(styleUp, { avoidStore: !end });
     } else {
-      const adds: any = { position, width, height };
+      const adds: any = { position };
       const style: any = { left, top, __p };
       keys(adds).forEach((add) => {
         const prop = adds[add];
