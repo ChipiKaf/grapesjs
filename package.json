@@ -1,5 +1,5 @@
 {
-  "name": "@grapesjs/monorepo",
+  "name": "grapesjs",
   "version": "0.0.0",
   "packageManager": "pnpm@9.10.0",
   "main": "packages/core/dist/grapes.min.js",
@@ -78,6 +78,14 @@
       ]
     }
   },
+  "exports": {
+  ".": {
+    "import": "./packages/core/dist/grapes.mjs",
+    "require": "./packages/core/dist/grapes.min.js",
+    "types": "./packages/core/dist/index.d.ts"
+  },
+  "./dist/css/grapes.min.css": "./packages/core/dist/css/grapes.min.css"
+},
   "engines": {
     "node": ">=20",
     "pnpm": ">=9"
