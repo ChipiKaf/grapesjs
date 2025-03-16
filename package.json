@@ -2,8 +2,12 @@
   "name": "@grapesjs/monorepo",
   "version": "0.0.0",
   "packageManager": "pnpm@9.10.0",
+  "main": "packages/core/dist/grapes.min.js",
+  "types": "packages/core/dist/index.d.ts",
+  "module": "packages/core/dist/grapes.mjs",
   "scripts": {
     "start": "pnpm --filter grapesjs start",
+    "prepare": "cd packages/core && npm run build",
     "start:docs": "pnpm --filter @grapesjs/docs docs",
     "test": "pnpm -r run test",
     "docs": "pnpm --filter @grapesjs/docs docs",
