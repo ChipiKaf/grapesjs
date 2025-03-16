@@ -7,7 +7,6 @@
   "module": "packages/core/dist/grapes.mjs",
   "scripts": {
     "start": "pnpm --filter grapesjs start",
-    "prepare": "cd packages/core && npm run build",
     "start:docs": "pnpm --filter @grapesjs/docs docs",
     "test": "pnpm -r run test",
     "docs": "pnpm --filter @grapesjs/docs docs",
